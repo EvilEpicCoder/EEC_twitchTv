@@ -1,1 +1,51 @@
 /*EEC_twitchTv*/
+h1, h2{
+  text-align: center;
+}
+.card-title{
+  background: black;
+  margin:0px;
+  padding: 0px;
+  border:none;
+  border-radius: 5px;
+}
+.card-image{
+  height: 200px;
+  background-repeat: no-repeat;
+  /*background-size: 100% auto;*/
+  background-size: cover;
+  background-position:center;
+}
+
+/*
+.image{
+  display:inline-block;
+  height:100px;
+  width: 100px;
+  border: 1px solid black;
+}
+.description{
+  display:inline-block;
+}
+.online::before{
+content:'online';
+background:green;
+border:none;
+border-radius: 5px;
+color:white;
+}
+.offline::before{
+content:'offline';
+background:red;
+border:none;
+border-radius: 5px;
+color:grey;
+}
+.row{
+  background: gray;
+}
+.col{
+  border: 1px solid blue;
+  background: white;
+}
+*/
