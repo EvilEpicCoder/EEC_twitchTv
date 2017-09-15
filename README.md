@@ -7,12 +7,14 @@ How I see my app:
   * Picture
   * Description
   * Links to channel
-  * Online \ Offline mark
+  * Online \ Offline link mark
 
 2. Big nav Button
   * Show Online \ Offline Live streams
   * Button all channels
   * Button all streams
+  * Button show all
+  * Button "share with twitter"
 
 
 How to use:

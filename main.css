@@ -1,6 +1,13 @@
 /*EEC_twitchTv*/
-h1, h2{
+h1{
   text-align: center;
+  font-size: 60px;
+  font-family: 'Crushed', cursive;
+}
+h2{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Crushed', cursive;
 }
 .card-title{
   background: black;
@@ -17,35 +24,3 @@ h1, h2{
   background-position:center;
 }
 
-/*
-.image{
-  display:inline-block;
-  height:100px;
-  width: 100px;
-  border: 1px solid black;
-}
-.description{
-  display:inline-block;
-}
-.online::before{
-content:'online';
-background:green;
-border:none;
-border-radius: 5px;
-color:white;
-}
-.offline::before{
-content:'offline';
-background:red;
-border:none;
-border-radius: 5px;
-color:grey;
-}
-.row{
-  background: gray;
-}
-.col{
-  border: 1px solid blue;
-  background: white;
-}
-*/

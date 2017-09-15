@@ -1,13 +1,10 @@
 //Main js EEC_twitchTv
 var globalData=[];
 var globalStreamData=[];
-var channelList=["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","lgamezzonel"].sort();
-//var channelList=["ESL_SC2", "OgamingSC2", "cretetion"];
+var channelList=["blizzheroes","jovironebr","jankos","rakin","gosu","halo","2kgames","ubisoft","rockstar","bethesda","esl_csgo","theliquidduck","danzhizzle","starladder1","jujushinobi","firstearth","tuzson","baradul","f0rcedinducti0n","ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "RobotCaleb", "noobs2ninjas","lgamezzonel"].sort();
 var webResources=["https://api.twitch.tv/kraken/channels/","https://api.twitch.tv/kraken/streams/"];
 var lastUrl="?client_id=axjhfp777tflhy0yjb5sftsil&callback=?";
 var x=0;
-var myToogle=0;
-
 $(document).ready(function(){
 	//statusReport(sendRequest());
 	//statusReport(buildUserInterface());
@@ -42,7 +39,6 @@ $(document).ready(function(){
 		window.open("https://twitter.com/intent/tweet?text="+"I love Twitch :heart:\n "+" \n https://codepen.io/EvilEpicCoder/full/LzVZMp/ \n ",'_blank');
 	});
 
-
 });
 function getObjects(type){
 	if(type=="live"){
@@ -70,10 +66,6 @@ $.getJSON(targetURL,function(data,status,xhr){
 		});
 }
 function buildUserInterface(globalDataArr, type){
-	if(x>=globalData.length-1){
-		clearInterval(myToogle);
-	}
-
 	//channel.logo
 	//channel.profile_banner
 	//channel.name
@@ -82,27 +74,21 @@ function buildUserInterface(globalDataArr, type){
 	//channel.display_name
 	//channel.game
 	//<img src="'+globalDataArr.profile_banner+'">'+
+	//'<a href="'+data+'">'+data+"</a>"
 if(type=="live"){
 	if(globalDataArr.stream!=null){
-		$(".row").append('<div class="col s4 m4"><div class="card">'+
+		$(".row").append('<div class="col s12 m6 l4 xl4"><div class="card">'+
 		"<div style='background-image:url("+globalDataArr.stream.channel.profile_banner+")' class=\"card-image\">"+
 		'<span class="card-title">'+globalDataArr.stream.channel.display_name+'</span>'+
-		'</div>'+'<div class="card-content"><p>Channel dedicated to : '+globalDataArr.stream.channel.game+ '</p><a href="'+globalDataArr.stream.channel.url+'">'+globalDataArr.stream.channel.url+"</a><p> Total channel views : "+globalDataArr.stream.channel.views+"</p></div>"+
-		'<div class="card-action"><a href="'+globalDataArr.stream.channel.url+'">Visit Channel</a><a href="'+globalDataArr.stream.channel.url+'">Live Stream</a></div>'+
+		'</div>'+'<div class="card-content"><p>Dedicated to : <br> '+globalDataArr.stream.channel.game+ '</p><a href="'+globalDataArr.stream.channel.url+'">'+globalDataArr.stream.channel.url+"</a><p> Total views : "+globalDataArr.stream.channel.views+"</p></div>"+
+		'<div class="card-action"><a href="'+globalDataArr.stream.channel.url+'">LIVE stream</a></div>'+
 		"</div></div>");
-	}
-		// $(".row").append('<div class="col s4 m4"><div class="card">'+
-		// "<div style='background-image:url("+globalDataArr.profile_banner+")' class=\"card-image\">"+
-		// '<span class="card-title">'+globalDataArr.display_name+'</span>'+
-		// '</div>'+'<div class="card-content"><p>Channel dedicated to : '+globalDataArr.game+ '</p><a href="'+globalDataArr.url+'">'+globalDataArr.url+"</a><p> Total channel views : "+globalDataArr.views+"</p></div>"+
-		// '<div class="card-action"><a href="'+globalDataArr.url+'">Visit Channel</a></div>'+
-		// "</div></div>");
-
-}else{
-	$(".row").append('<div class="col s4 m4"><div class="card">'+
+		}
+	}else{
+	$(".row").append('<div class="col s12 m6 l4 xl4"><div class="card">'+
 	"<div style='background-image:url("+globalDataArr.profile_banner+")' class=\"card-image\">"+
 	'<span class="card-title">'+globalDataArr.display_name+'</span>'+
-	'</div>'+'<div class="card-content"><p>Channel dedicated to : '+globalDataArr.game+ '</p><a href="'+globalDataArr.url+'">'+globalDataArr.url+"</a><p> Total channel views : "+globalDataArr.views+"</p></div>"+
+	'</div>'+'<div class="card-content"><p>Dedicated to : <br>'+globalDataArr.game+ '</p><a href="'+globalDataArr.url+'">'+globalDataArr.url+"</a><p> Total views : "+globalDataArr.views+"</p></div>"+
 	'<div class="card-action"><a href="'+globalDataArr.url+'">Visit Channel</a></div>'+
 	"</div></div>");
 }
