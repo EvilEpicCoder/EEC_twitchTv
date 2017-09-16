@@ -66,15 +66,6 @@ $.getJSON(targetURL,function(data,status,xhr){
 		});
 }
 function buildUserInterface(globalDataArr, type){
-	//channel.logo
-	//channel.profile_banner
-	//channel.name
-	//channel.url
-	//channel.views
-	//channel.display_name
-	//channel.game
-	//<img src="'+globalDataArr.profile_banner+'">'+
-	//'<a href="'+data+'">'+data+"</a>"
 if(type=="live"){
 	if(globalDataArr.stream!=null){
 		$(".row").append('<div class="col s12 m6 l4 xl4"><div class="card">'+
